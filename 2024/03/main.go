@@ -28,7 +28,7 @@ func main() {
 }
 
 func mul(s string) (r int) {
-	re := regexp.MustCompile(`mul\((\d+),(\d+)\)`)
+	re := regexp.MustCompile(`mul\((\d{1,3}),(\d{1,3})\)`)
 	for _, m := range re.FindAllStringSubmatch(s, -1) {
 		n1, _ := strconv.Atoi(m[1])
 		n2, _ := strconv.Atoi(m[2])
